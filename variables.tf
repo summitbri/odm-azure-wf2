@@ -2,7 +2,7 @@ variable "repo_name" {
   default = "odm-azure-wf2"
 }
 variable "repo_owner" {
-  default = "kendrickcc"
+  default = "summitbri"
 }
 variable "project" {
   default = "test build"
