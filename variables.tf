@@ -20,7 +20,7 @@ variable "fuse_accountkey" {
   description = "Stored as a GitHub secret"
 }
 variable "container" {
- default = "hwyuu" 
+ default = "webodmblob" 
 }
 variable "prefix" {
   description = "The prefix which should be used for all resources in this example"
