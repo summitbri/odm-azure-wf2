@@ -126,10 +126,10 @@ resource "azurerm_linux_virtual_machine" "nodeodm" {
   tags = merge(local.common_tags)
 #auto-shutdown vm at night code
 }
-resource "azurerm_linux_virtual_machine" "nodeodm" {
+resource "azurerm_linux_virtual_machine_shutdown_schedule" "nodeodm" {
   name                = "${var.prefix}-nodeodm${count.index}-vm"
   location            = azurerm_resource_group.rg.location
-  enabled            = true
+  enabled             = true
 
   daily_recurrence_time = "2200"
   timezone              = "Mountain Standard Time"
