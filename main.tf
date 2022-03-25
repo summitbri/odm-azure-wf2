@@ -125,3 +125,4 @@ resource "azurerm_linux_virtual_machine" "nodeodm" {
   }
   tags = merge(local.common_tags)
 
+}
