@@ -31,7 +31,7 @@ runcmd:
   - curl https://rclone.org/install.sh | sudo bash
   - sudo mkdir -p /mnt/resource/blobfusetmp
   - sudo mkdir -p /odm/datasets/project/images
-  #- git clone https://github.com/OpenDroneMap/WebODM --config core.autocrlf=input --depth 1 /odm/WebODM
+  - git clone https://github.com/OpenDroneMap/WebODM --config core.autocrlf=input --depth 1 /odm/WebODM
   - sudo chown -R odm:odm /mnt/resource/blobfusetmp
   - sudo chown -R odm:odm /odm
   # create blobfuse connection config file
