@@ -126,7 +126,7 @@ resource "azurerm_linux_virtual_machine" "nodeodm" {
   tags = merge(local.common_tags)
 #auto-shutdown vm at night code
 }
-resource "azurerm_linux_virtual_machine_shutdown_schedule" "nodeodm" {
+resource "azurerm_dev_test_global_vm_shutdown_schedule" "nodeodm" {
   name                = "${var.prefix}-nodeodm${count.index}-vm"
   location            = azurerm_resource_group.rg.location
   enabled             = true
