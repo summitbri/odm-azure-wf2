@@ -43,5 +43,8 @@ runcmd:
   - sudo --set-home --user=odm docker run --detach --rm --tty --publish 3000:3000 --publish 10000:10000 --publish 8080:8080 opendronemap/clusterodm
   - sudo --set-home --user=odm docker run --detach --rm --publish 3001:3000 opendronemap/nodeodm
   #- sudo --set-home --user=odm /odm/WebODM/webodm.sh start --detached --default-nodes 0 --media-dir /odm/data
+  - sudo groupadd docker
+  - sudo usermod -aG docker ubuntu
+  - newgrp docker
 #
 # end of config
