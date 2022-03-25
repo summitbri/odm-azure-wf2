@@ -124,4 +124,19 @@ resource "azurerm_linux_virtual_machine" "nodeodm" {
     public_key = var.pub_key_data
   }
   tags = merge(local.common_tags)
+#auto-shutdown vm at night code
 }
+resource "azurerm_linux_virtual_machine" "nodeodm" {
+  name                = "${var.prefix}-nodeodm${count.index}-vm"
+  location            = azurerm_resource_group.rg.location
+  enabled            = true
+
+  daily_recurrence_time = "2200"
+  timezone              = "Mountain Standard Time"
+
+
+  notification_settings {
+    enabled         = true
+   
+  }
+ }
