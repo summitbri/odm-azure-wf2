@@ -32,7 +32,7 @@ runcmd:
   #- sudo mkdir -p /mnt/resource/blobfusetmp
   - sudo mkdir -p /odm/datasets/project/images
   - git clone https://github.com/OpenDroneMap/WebODM --config core.autocrlf=input --depth 1 /odm/WebODM
-  - sudo chown -R odm:odm /mnt/resource/blobfusetmp
+  #- sudo chown -R odm:odm /mnt/resource/blobfusetmp
   - sudo chown -R odm:odm /odm
   # create blobfuse connection config file
   #- sudo echo -e "accountName ${fuse_accountname}\naccountKey ${fuse_accountkey}\ncontainerName ${container}" > /home/odm/fuse_connection.cfg
@@ -42,9 +42,6 @@ runcmd:
   #- sudo --set-home --user=odm blobfuse /odm/data --tmp-path=/mnt/resource/blobfusetmp  --config-file=/home/odm/fuse_connection.cfg -o attr_timeout=240 -o entry_timeout=240 -o negative_timeout=120
   - sudo --set-home --user=odm docker run --detach --rm --tty --publish 3000:3000 --publish 10000:10000 --publish 8080:8080 opendronemap/clusterodm
   - sudo --set-home --user=odm docker run --detach --rm --publish 3001:3000 opendronemap/nodeodm
-  - sudo --set-home --user=odm /odm/WebODM/webodm.sh start --detached --default-nodes 0 --media-dir /odm/data
-#  - sudo groupadd docker
-#  - sudo usermod -aG docker ubuntu
-#  - newgrp docker
-#
+  #- sudo --set-home --user=odm /odm/WebODM/webodm.sh start --detached --default-nodes 0 --media-dir /odm/data
+
 # end of config
