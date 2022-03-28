@@ -24,7 +24,7 @@ variable "container" {
 }
 variable "prefix" {
   description = "The prefix which should be used for all resources in this example"
-  default     = "tempRGforODMprocessor"
+  default     = "XXXXXXXXXXXXXXXXX"
 }
 variable "location" {
   default = "centralus"
